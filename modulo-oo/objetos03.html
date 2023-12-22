@@ -17,19 +17,25 @@
                 alert(numero)
             }
 
+            this.returnAnimal = function(animal){
+                return animal 
+            }
+
         }
 
-        function Animal(nome, peso){
-            this.nome = nome
-            this.peso  = peso
+        function Animal(){
+            this.nome = 'cachorro'
+            this.raca = 'Pitbul'
         }
 
-        animal = new Animal('cachorro', '12kg')
+        var pessoa= new Pessoa()
 
-        animal_2 = new Animal('gato', '6kg')
+        var animal = new Animal()
 
-        alert(animal.nome)
-        alert(animal_2.peso)
+
+        alert(pessoa.returnAnimal(animal).raca)
+
+        
     </script>
 </body>
 </html>

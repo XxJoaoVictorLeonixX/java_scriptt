@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /*
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-left: 0;
+        }
+        .aniEsquerda{
+            transition: 1s;
+            margin-left: 90px;
+            margin-top: 90px;
+            background-color: green;
+        }
+        */
+        .conteudo h2 span{
+            font-size: 13px;
+            cursor: pointer;
+        }
+        .conteudo p {
+            overflow: hidden;
+            height: 10px;
+            transition: 1s;
+        }
+        .mostrar{
+            height: 200px !important;
+        }
+    </style>
+    
+    <div class="conteudo">
+        <h2>Titulo do conteudo <span>Ver mais!</span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam reprehenderit quisquam doloribus enim nam ipsum eligendi adipisci quos in consectetur accusantium fuga animi libero, ducimus quo cumque, praesentium nesciunt aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis vero tempore corporis? Nemo sint culpa pariatur vel adipisci velit cupiditate dolorem odit error fuga. Ipsam et temporibus eum minus dolorum.</p>
+    </div>
+
+
+    <script>
+        /*
+        var box = document.querySelectorAll('.box')[0]
+        
+        setTimeout(()=>{
+            box.classList.add('aniEsquerda')
+        },1000)
+        
+
+        box.addEventListener('click', ()=>{
+            box.classList.add('aniEsquerda')
+        })
+        */
+
+
+        document.querySelector('.conteudo span')
+        .addEventListener('click', ()=>{
+            var conteudo = document.querySelector('.conteudo p')
+
+            if(conteudo.classList.contains('mostrar')){
+                conteudo.classList.remove('mostrar')
+            }else{
+                conteudo.classList.add('mostrar')
+            }
+        })
+    </script>
+</body>
+</html>
